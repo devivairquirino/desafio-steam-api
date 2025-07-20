@@ -1,15 +1,16 @@
 package desafio14;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class MaiorPrimo {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 4, 3);
 
-        List<Integer> numerosPrimos = numeros.stream().filter(n -> ehPrimo(n)).toList();
+        List<Integer> numerosPrimos = numeros.stream().filter(n -> ehPrimo(n)).sorted(Comparator.reverseOrder()).toList();
 
-        System.out.println(numerosPrimos);
+        System.out.println("O maior número primo da lista: "+numerosPrimos.get(0));
     }
 
     private static boolean ehPrimo(Integer numero) {
