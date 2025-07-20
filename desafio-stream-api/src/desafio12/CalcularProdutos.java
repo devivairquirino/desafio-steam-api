@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class Produtos {
+public class CalcularProdutos {
 
     public static void main(String[] args) {
         
